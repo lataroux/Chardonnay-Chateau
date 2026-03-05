@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chardonnay Chateau</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Chardonnay Chateau</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="form.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <main>
+            <form method="POST">
+                <div>
+                    <label for= "booking_date">Booking Date</label>
+                    <input type="date" id="booking_date" name="booking_date" required>
+                </div>
+                <div>
+                    <label for="booking_time">Booking Time</label>
+                    <input type="time" id="booking_time" name="booking_time"required>
+                </div>
+                <div>
+                    <label for="customer_name">Reservation Name</label>
+                    <input type="text" id="customer_name" name="customer_name" placeholder="Your Name" required>
+                </div>
+                <div>
+                    <label for="customer_email">Email</label>
+                    <input type="email" id="customer_email" name="customer_email" placeholder="Your Email" required>
+                </div>
+                <div>
+                    <label for="party_size">Party Size</label>
+                    <input type="range" id="party_size" name="party_size" min="1" max="6" value="4" oninput="this.nextElementSibling.value = this.value">
+                    <output>4</output>
+                </div>
+                <div>
+                    <label for="booking_location">Seating Preference</label>
+                    <input id="booking_location" name="booking_location" list="seating_options" placeholder="Seating Area" required>
+                    <datalist id="seating_options">
+                        <option value="Dining Room">
+                        <option value="Terrace">
+                        <option value="Bar">
+                        <option value="No Preference">
+                    </datalist>
+                </div>
+                <div>
+                    <label for="special_requests">Special Requests</label>
+                    <textarea id="special_requests" name="special_requests" placeholder="Any special requests?" rows="10" cols="30" >
+                    </textarea>
+                <div>
+                    <label>I agree to the cancellation policy</label>
+                    <input type= "checkbox" required>
+                </div>
+                <button type="submit">Book Now</button>
+            </form>
+            <p>for parties of 7 or more, please call us at 555-123-4567</p>
+        </main>
+        <footer>
+            <p>&copy; 2026 Chardonnay Chateau. All rights reserved.</p>
+        </footer>
+    </body>
